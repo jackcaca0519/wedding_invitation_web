@@ -24,6 +24,12 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link href="css/style2.css" rel="stylesheet">
+
+    <style>
+        .plyr{
+            border-radius: 0 !important;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -53,7 +59,7 @@
 
 <!-- slider_area -->
 <div id="home">
-    <div class="plyr__video-embed" id="player-youtube">
+    <div id="player-youtube">
         <iframe src="https://www.youtube.com/embed/8uoGgN70Hi8"
         allow="autoplay"></iframe>
     </div>
@@ -401,6 +407,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             'volume', // Volume control
         ],
         autoplay: true,
+        ratio: '16:10',
+        quality: {default: 1080},
+        youtube: {
+            noCookie: true
+        },
     });
 
     function initMap() {
