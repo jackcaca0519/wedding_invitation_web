@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,600i,700,700i,800,800i,900|Petit+Formal+Script&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,600i,700,700i,800,800i,900|Petit+Formal+Script&display=swap");
+@import url("./ChenYuluoyan-Thin-Monospaced.ttf");
+
+@font-face {
+  font-family: 'ChenYuluoyan';
+  src: url('./ChenYuluoyan-Thin-Monospaced.ttf');
+}
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_extend.scss */
 .flex-center-start {
   display: -webkit-box;
@@ -21,9 +27,10 @@
 /* 1. Theme default css */
 /* line 4, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/theme-default.scss */
 body {
-  font-family: "Petit Formal Script", cursive;
+  font-family: "ChenYuluoyan";
   font-weight: normal;
   font-style: normal;
+  font-size: 16px;
   overflow-x: hidden;
 }
 
@@ -75,7 +82,7 @@ button {
 
 /* line 44, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/theme-default.scss */
 h1, h2, h3, h4, h5 {
-  font-family: "Petit Formal Script", cursive;
+  font-family: "ChenYuluoyan";
   color: #1F1F1F;
 }
 
@@ -107,7 +114,7 @@ p {
   line-height: 28px;
   color: #727272;
   margin-bottom: 13px;
-  font-family: "Petit Formal Script", cursive;
+  font-family: "ChenYuluoyan";
 }
 
 /* line 73, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/theme-default.scss */
@@ -338,7 +345,7 @@ h3 {
   color: #000;
   display: inline-block;
   padding: 18px 44px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   font-size: 14px;
   font-weight: 400;
   border: 0;
@@ -372,7 +379,7 @@ h3 {
   color: #fff;
   display: inline-block;
   padding: 17px 50px 16px 50px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   font-size: 16px;
   font-weight: 400;
   border: 0;
@@ -423,7 +430,7 @@ h3 {
   color: #F2C64D;
   display: inline-block;
   padding: 15px 44px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   font-size: 16px;
   font-weight: 600;
   border: 0;
@@ -455,7 +462,7 @@ h3 {
   color: #fff;
   display: inline-block;
   padding: 15px 44px;
-  font-family: "Petit Formal Script", cursive;
+  font-family: "ChenYuluoyan";
   font-size: 16px;
   font-weight: 600;
   border: 0;
@@ -495,9 +502,9 @@ h3 {
 
 /* line 9, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_section_title.scss */
 .section_title span {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   color: #C78665;
   display: block;
   margin-top: 20px;
@@ -506,8 +513,8 @@ h3 {
 
 /* line 18, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_section_title.scss */
 .section_title h3 {
-  font-size: 36px;
-  font-family: "Muli", sans-serif;
+  font-size: 2.5rem;
+  font-family: "ChenYuluoyan";
   font-weight: 400;
   text-transform: uppercase;
   margin-top: 20px;
@@ -770,7 +777,7 @@ h3 {
   font-weight: 400;
   display: inline-block;
   padding: 38px 23px 38px 23px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   position: relative;
 }
 
@@ -1136,7 +1143,7 @@ h3 {
 .slider_area_inner .slider_text h4 {
   font-size: 16px;
   font-weight: 600;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   color: #fff;
   margin-top: 5px;
 }
@@ -1144,7 +1151,7 @@ h3 {
 /* line 113, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
 .slider_area_inner .slider_text h3 {
   font-size: 36px;
-  font-family: "Petit Formal Script", cursive;
+  font-family: "ChenYuluoyan";
   font-weight: 400;
   color: #fff;
   line-height: 46px;
@@ -1179,7 +1186,7 @@ h3 {
 /* line 138, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
 .slider_area_inner .slider_text span {
   font-size: 18px;
-  font-family: "Petit Formal Script", cursive;
+  font-family: "ChenYuluoyan";
   font-weight: 400;
   color: #fff;
 }
@@ -1321,7 +1328,7 @@ h3 {
 /* line 39, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_wedding_counter.scss */
 .weeding_countdown_area .countdown_area .countdown_wrap .single_countdown h3 {
   font-size: 60px;
-  font-family: "Petit Formal Script", cursive;
+  font-family: "ChenYuluoyan";
   font-weight: 400;
   color: #C78665;
   margin-bottom: 17px;
@@ -1336,7 +1343,7 @@ h3 {
 
 /* line 49, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_wedding_counter.scss */
 .weeding_countdown_area .countdown_area .countdown_wrap .single_countdown span {
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -1380,12 +1387,12 @@ h3 {
 .program_details_area .single_program .program_inner span {
   font-size: 20px;
   font-weight: 400;
-  font-family: "Petit Formal Script", cursive;
+  font-family: "ChenYuluoyan";
 }
 
 /* line 27, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_program.scss */
 .program_details_area .single_program .program_inner h3 {
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
@@ -1397,7 +1404,7 @@ h3 {
 /* line 36, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_program.scss */
 .program_details_area .single_program .program_inner p {
   font-size: 16px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
 }
 
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_attending.scss */
@@ -1497,7 +1504,7 @@ h3 {
 .attending_area .main_attending_area .popup_box p {
   font-size: 15px;
   color: #727272;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   margin-bottom: 34px;
 }
 
@@ -1514,7 +1521,7 @@ h3 {
   border: 1px solid #ddd;
   padding: 15px;
   margin-bottom: 20px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
 }
 
 /* line 69, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_attending.scss */
@@ -1532,7 +1539,7 @@ h3 {
 .attending_area .main_attending_area .popup_box button {
   width: 100%;
   border: none;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
 }
 
 /* line 82, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_attending.scss */
@@ -1542,7 +1549,7 @@ h3 {
   border: 1px solid #ddd;
   padding: 15px;
   margin-bottom: 20px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
 }
 
 /* line 89, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_attending.scss */
@@ -1567,7 +1574,7 @@ h3 {
   cursor: pointer;
   display: block;
   float: left;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   font-weight: normal;
   width: 100% !important;
   /* height: 42px; */
@@ -1605,7 +1612,7 @@ h3 {
   top: 3px;
   transition: all 0.15s ease-in-out;
   width: 5px;
-  font-family: fontawesome;
+  font-family: 'ChenYuluoyan';
   color: #919191;
   font-size: 15px;
 }
@@ -1774,7 +1781,7 @@ h3 {
 .love_story_area .weding_time_line .single_time_line p {
   font-size: 16px;
   line-height: 28px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
 }
 
 /* line 104, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_story.scss */
@@ -1941,7 +1948,7 @@ h3 {
 .location_area .location_info .location_inner p {
   color: #727272;
   font-size: 16px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   line-height: 28px;
   margin-bottom: 0;
   font-weight: 400;
@@ -1963,7 +1970,7 @@ h3 {
 .location_area .location_info .location_inner .address_info .single_address h4 {
   color: #C78665;
   font-size: 16px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   font-weight: 600;
 }
 
@@ -1971,7 +1978,7 @@ h3 {
 .location_area .location_info .location_inner .address_info .single_address p {
   color: #727272;
   font-size: 15px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   font-weight: 400;
   line-height: 26px;
 }
@@ -1995,7 +2002,7 @@ h3 {
 /* line 9, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_footer.scss */
 .footer .footer_top ul li a {
   font-size: 15px;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
   margin: 0 27px;
   color: #1F1F1F;
 }
@@ -2029,7 +2036,7 @@ h3 {
   color: #919191;
   margin-bottom: 0;
   font-weight: 400;
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
 }
 
 @media (max-width: 767px) {
@@ -2142,7 +2149,7 @@ h3 {
 
 /* line 58, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_bradcam.scss */
 .accommodation_area p {
-  font-family: "Muli", sans-serif;
+  font-family: "ChenYuluoyan";
 }
 
 /*=================== contact banner start ====================*/
@@ -5287,3 +5294,7 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.navbar-nav{
+  font-size: 1.5rem;
+}

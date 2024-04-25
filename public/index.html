@@ -4,112 +4,77 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Weeding</title>
+    <title>Jack & Angel</title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
-    <!-- Place favicon.ico in the root directory -->
+    <!-- sandbox -->
+    <link rel="stylesheet" href="plugin/sandbox-330/dist/assets/css/plugins.css">
+    <link rel="stylesheet" href="plugin/sandbox-330/dist/assets/css/style.css">
+    <!-- material Icons -->
+    <link rel="stylesheet" href="plugin/material_icons/material.css">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <link href="css/style2.css" rel="stylesheet">
 </head>
 
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-<!-- header-->
-<header>
-    <div class="header-area ">
-        <div id="sticky-header" class="main-header-area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-3 col-lg-3">
-                        <div class="logo-img">
-                            <a href="index.html">
-                                <img src="img/logo.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-9">
-                        <div class="main-menu  d-none d-lg-block">
-                            <nav>
-                                <ul id="navigation">
-                                    <li><a class="active" href="index.html">home</a></li>
-                                    <li><a href="story.html">Our Story</a></li>
-                                    <li><a href="Gallery.html">Gallery</a></li>
-                                    <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html">blog</a></li>
-                                            <li><a href="single-blog.html">single-blog</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="Accommodation.html">Accommodation</a></li>
-                                            <li><a href="elements.html">elements</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
-                </div>
-            </div>
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+<!-- Navbar Start -->
+<nav class="navbar fixed-top navbar-expand-lg py-3 py-lg-0 px-lg-5" style="backdrop-filter: blur(5px);background-color: #ffffff70;">
+    <a href="index.html" class="text-primary navbar-brand d-block d-lg-none pt-0">
+        <h2 style="color: #a46b4e;">擇宣 & 恩祈</h2>
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="material-icons">menu</span>
+    </button>
+    <div class="py-2 collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+            <h2 style="color: #a46b4e;">擇宣 & 恩祈</h2>
+        </a>
+        <div class="navbar-nav ml-auto py-0">
+            <a href="#home" class="nav-item nav-link active">影片</a>
+            <a href="#count" class="nav-item nav-link">倒數</a>
+            <a href="#story" class="nav-item nav-link">故事</a>
+            <a href="#gallery" class="nav-item nav-link">相冊</a>
+            <a href="#attend" class="nav-item nav-link">報名</a>
+            <a href="#location" class="nav-item nav-link">地點</a>
         </div>
     </div>
-</header>
-<!--/ header-->
+</nav>
+<!-- Navbar End -->
 
 <!-- slider_area -->
-<div class="slider_area ">
-    <div class="slider_area_inner slider_bg_1 overlay2">
-        <div class="slider_text text-center">
-            <div class="text_inner">
-                <img src="img/banner/ornaments.png" alt="">
-                <h4>14 Jan 2020</h4>
-                <h3>Anjelina & Jack <br>
-                    Wedding Ceremony</h3>
-                <span>Get Married</span>
-            </div>
-        </div>
+<div id="home">
+    <div class="plyr__video-embed" id="player-youtube">
+        <iframe src="https://www.youtube.com/embed/8uoGgN70Hi8"
+        allow="autoplay"></iframe>
     </div>
 </div>
 <!--/ slider_area -->
 
 <!-- wedding_countdown -->
-<div class="weeding_countdown_area">
+<div class="weeding_countdown_area p-0 position-relative" style="top:-20px;" id="count">
     <div class="flowaers_top d-none d-lg-block">
         <img src="img/banner/flower-top.png" alt="">
     </div>
     <div class="flowaers_bottom d-none d-lg-block">
             <img src="img/banner/flower-bottom.png" alt="">
-        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="section_title text-center">
                     <img src="img/banner/flowers.png" alt="">
-                    <span>14. January. 2020</span>
-                    <h3>THE. WEDDING. Countdown</h3>
+                    <span>2025.02.22</span>
+                    <h3>婚禮倒數</h3>
                 </div>
             </div>
         </div>
@@ -123,228 +88,118 @@
 </div>
 <!--/ wedding_countdown -->
 
-<!-- our_love-story -->
-<div class="love_story_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="section_title text-center">
-                    <img src="img/banner/flowers.png" alt="">
-                    <h3>Our. Love. Story</h3>
-                </div>
-            </div>
+<!-- Story Start -->
+<div class="container-fluid py-5" id="story">
+    <div class="container pt-5 pb-3">
+        <div class="section-title position-relative text-center">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Story</h6>
+            <h1 class="font-secondary display-4">Our Love Story</h1>
+            <i class="far fa-heart text-dark"></i>
         </div>
-        <div class="row">
-            <div class="col-xl-4 col-md-6 col-lg-4">
-                <div class="single_lover_story text-center">
-                    <div class="story_thumb">
-                        <img src="img/story/1.png" alt="">
-                    </div>
-                    <span>Groom</span>
-                    <h3>Jack Wonner</h3>
-                    <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                        alteration in some content of a page when looking at its layout. The point of using Lorem
-                        Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-                        Content here content here, making it look like readable English. Many desktop publishing
-                        packages and web page editors now use.</p>
-                    <div class="social_links">
-                        <ul>
-                            <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                            <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                            <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                        </ul>
+        <div class="container timeline position-relative p-0">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-right">
+                    <img class="img-fluid mr-md-3" src="img/story-1.jpg" alt="">
+                </div>
+                <div class="col-md-6 text-center text-md-left">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+                        <h4 class="mb-2">First Meet</h4>
+                        <p class="text-uppercase mb-2">01 Jan 2050</p>
+                        <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-md-6 col-lg-4">
-                <div class="weding_time_line text-center">
-                    <div class="single_time_line">
-                        <h3>Fast Meet</h3>
-                        <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some.</p>
+            <div class="row">
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                        <h4 class="mb-2">First Date</h4>
+                        <p class="text-uppercase mb-2">01 Jan 2050</p>
+                        <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
                     </div>
-                    <div class="single_time_line">
-                        <h3>He Proposed</h3>
-                        <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some.</p>
-                    </div>
-                    <div class="single_time_line">
-                        <h3>Love Story</h3>
-                        <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some.</p>
-                    </div>
-                    <div class="single_time_line">
-                        <h3>Wedding Day</h3>
+                </div>
+                <div class="col-md-6 text-center text-md-left">
+                    <img class="img-fluid ml-md-3" src="img/story-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-center text-md-right">
+                    <img class="img-fluid mr-md-3" src="img/story-3.jpg" alt="">
+                </div>
+                <div class="col-md-6 text-center text-md-left">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+                        <h4 class="mb-2">Proposal</h4>
+                        <p class="text-uppercase mb-2">01 Jan 2050</p>
+                        <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4">
-                <div class="single_lover_story text-center">
-                    <div class="story_thumb">
-                        <img src="img/story/2.png" alt="">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                        <h4 class="mb-2">Enagagement</h4>
+                        <p class="text-uppercase mb-2">01 Jan 2050</p>
+                        <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
                     </div>
-                    <span>Bride</span>
-                    <h3>Anjelina Kona</h3>
-                    <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                        alteration in some content of a page when looking at its layout. The point of using Lorem
-                        Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-                        Content here content here, making it look like readable English. Many desktop publishing
-                        packages and web page editors now use.</p>
-                    <div class="social_links">
-                        <ul>
-                            <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                            <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                            <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="col-md-6 text-center text-md-left">
+                    <img class="img-fluid ml-md-3" src="img/story-4.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--/ our_love-story -->
+<!-- Story End -->
 
-<!-- gallery_area  -->
-<div class="gallery_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="section_title text-center">
-                    <img src="img/banner/flowers.png" alt="">
-                    <h3>Gallery.  Photos</h3>
-                </div>
-            </div>
-        </div>
+<!-- Gallery Start -->
+<div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
+    <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
+        <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
+        <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
+        <i class="far fa-heart text-white"></i>
     </div>
-    <div class="container-fluid p-0">
-        <div class="row grid no-gutters">
-            <div class="col-xl-4 col-md-6 col-lg-6 grid-item">
-                <div class="single_gallery gallery_imag_1">
-                    <a class="popup-image" href="img/gallery/1.png">
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-lg-6 grid-item">
-                <div class="single_gallery gallery_imag_2">
-                    <a class="popup-image" href="img/gallery/2.png">
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-5 col-md-6 col-lg-6 grid-item">
-                <div class="single_gallery gallery_imag_3">
-                    <a class="popup-image" href="img/gallery/3.png">
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-lg-6 grid-item">
-                <div class="single_gallery gallery_imag_4">
-                    <a class="popup-image" href="img/gallery/4.png">
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-5 col-md-6 col-lg-6 grid-item">
-                <div class="single_gallery gallery_imag_5">
-                    <a class="popup-image" href="img/gallery/5.png">
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-lg-6 grid-item">
-                <div class="single_gallery gallery_imag_6">
-                    <a class="popup-image" href="img/gallery/6.png">
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-lg-6 grid-item">
-                <div class="single_gallery gallery_imag_7">
-                    <a class="popup-image" href="img/gallery/7.png">
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-lg-6 grid-item">
-                <div class="single_gallery gallery_imag_8">
-                    <a class="popup-image" href="img/gallery/8.png">
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-5 col-md-6 col-lg-6 grid-item">
-                <div class="single_gallery gallery_imag_9">
-                    <a class="popup-image" href="img/gallery/9.png"></a>
-                </div>
-            </div>
+    <div class="owl-carousel gallery-carousel">
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
+            <a href="img/gallery-1.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
         </div>
-        <!-- <div class="grid row">
-            <div class="single_image grid-item">
-                <img src="img/gallery/1.png" alt="">
-            </div><div class="single_image grid-item">
-                <img src="img/gallery/2.png" alt="">
-            </div><div class="single_image grid-item">
-                <img src="img/gallery/3.png" alt="">
-            </div>
-        </div> -->
-    
-    
-    </div>
-</div>
-<!--/ gallery_area  -->
-
-<!-- program_details -->
-<div class="program_details_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="section_title text-center">
-                    <img src="img/banner/flowers.png" alt="">
-                    <h3>Program. Details</h3>
-                </div>
-            </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
+            <a href="img/gallery-2.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
         </div>
-        <div class="row">
-            <div class="col-xl-4 col-lg-4">
-                <div class="single_program program_bg_1 text-center">
-                    <div class="program_inner ">
-                        <span>
-                            16.00
-                        </span>
-                        <h3>Wedding Ceremony</h3>
-                        <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some content of a page when looking at its layout. </p>
-                        <img src="img/program_details/ornaments.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4">
-                <div class="single_program program_bg_2 text-center">
-                    <div class="program_inner ">
-                        <span>
-                            20.00
-                        </span>
-                        <h3>Lunch Time</h3>
-                        <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some content of a page when looking at its layout. </p>
-                        <img src="img/program_details/ornaments.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4">
-                <div class="single_program program_bg_3 text-center">
-                    <div class="program_inner ">
-                        <span>
-                            22.00
-                        </span>
-                        <h3>WeParty Time</h3>
-                        <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some content of a page when looking at its layout. </p>
-                        <img src="img/program_details/ornaments.png" alt="">
-                    </div>
-                </div>
-            </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
+            <a href="img/gallery-3.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
+            <a href="img/gallery-4.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
+            <a href="img/gallery-5.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
+            <a href="img/gallery-6.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
         </div>
     </div>
 </div>
-<!--/ program_details -->
+<!-- Gallery End -->
 
 <!-- attend_area -->
-<div class="attending_area">
+<div class="attending_area" id="attend">
     <div class="container">
         <div class="row">
             <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
@@ -399,7 +254,7 @@
 <!-- / attend_area -->
 
 <!-- ================ contact section start ================= -->
-<section class="location_area">
+<section class="location_area" id="location">
     <div class="location_info">
         <div class="location_inner">
             <div class="location_top text-center">
@@ -465,82 +320,124 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </footer>
 <!-- footer_end -->
 
-    <!-- JS here -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/scrollIt.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
-    <script src="js/gijgo.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
+<!-- JS here -->
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/ajax-form.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/scrollIt.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/nice-select.min.js"></script>
+<script src="js/gijgo.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/plugins.js"></script>
 
-    <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
+<!--sandbox-->
+<script src="plugin/sandbox-330/dist/assets/js/plugins.js"></script>
 
-    <script src="js/main.js"></script>
+<!--contact js-->
+<script src="js/contact.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
 
-    <script>
-        $('#clock').countdown('2020/01/07', function (event) {
-            $(this).html(event.strftime(
-                '<div class="countdown_wrap d-flex"><div  class="single_countdown"><h3>%D</h3><span>Days</span></div><div class="single_countdown"><h3>%H</h3><span>Hours</span></div><div class="single_countdown"><h3>%M</h3><span>Minutes</span></div><div class="single_countdown"><h3>%S</h3><span>Seconds</span></div></div>'
-            ));
+<!-- JavaScript Libraries -->
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+
+<!-- <script src="js/main.js"></script> -->
+<script src="js/main2.js"></script>
+
+<script>
+    $('#clock').countdown('2025/02/22', function (event) {
+        $(this).html(event.strftime(
+            '<div class="countdown_wrap d-flex"><div  class="single_countdown"><h3>%D</h3><span>天</span></div><div class="single_countdown"><h3>%H</h3><span>小時</span></div><div class="single_countdown"><h3>%M</h3><span>分鐘</span></div><div class="single_countdown"><h3>%S</h3><span>秒</span></div></div>'
+        ));
+    });
+
+    const playerYoutube = new Plyr('#player-youtube', {
+        i18n: {
+            restart: '重播', rewind: '倒帶 {seektime} 秒',
+            fastForward: '快轉 {seektime} 秒',
+            play: '播放', pause: '暫停',
+            seek: '尋找',
+            played: '已播放',
+            buffered: '緩衝',
+            currentTime: '目前時間', duration: '總共時間',
+            volume: '音量', mute: '靜音', unmute: '取消靜音',
+            captions: '內嵌字幕',
+            enableCaptions: '開啟內嵌字幕', disableCaptions: '關閉內嵌字幕',
+            enterFullscreen: '全螢幕', exitFullscreen: '退出全螢幕',
+            frameTitle: '{title} 播放器',
+            settings: '設定',
+            speed: '播放速率', normal: '一般',
+            quality: '畫質',
+            loop: '循還播放',
+            start: '開始', end: '結束',
+            all: '全部',
+            reset: '重置',
+            disabled: '關閉',
+            advertisement: '廣告',
+        },
+        controls: [
+            'play-large', // The large play button in the center
+            'play', // Play/pause playback
+            'progress', // The progress bar and scrubber for playback and buffering
+            'current-time', // The current time of playback
+            'duration', // The full duration of the media
+            'mute', // Toggle mute
+            'volume', // Volume control
+        ],
+        autoplay: true,
+    });
+
+    function initMap() {
+        var uluru = {
+            lat: -25.363,
+            lng: 131.044
+        };
+        var grayStyles = [{
+                featureType: "all",
+                stylers: [{
+                        saturation: -90
+                    },
+                    {
+                        lightness: 50
+                    }
+                ]
+            },
+            {
+                elementType: 'labels.text.fill',
+                stylers: [{
+                    color: '#ccdee9'
+                }]
+            }
+        ];
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: -31.197,
+                lng: 150.744
+            },
+            zoom: 9,
+            styles: grayStyles,
+            scrollwheel: false
         });
-    </script>
-    <script>
-        function initMap() {
-            var uluru = {
-                lat: -25.363,
-                lng: 131.044
-            };
-            var grayStyles = [{
-                    featureType: "all",
-                    stylers: [{
-                            saturation: -90
-                        },
-                        {
-                            lightness: 50
-                        }
-                    ]
-                },
-                {
-                    elementType: 'labels.text.fill',
-                    stylers: [{
-                        color: '#ccdee9'
-                    }]
-                }
-            ];
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: -31.197,
-                    lng: 150.744
-                },
-                zoom: 9,
-                styles: grayStyles,
-                scrollwheel: false
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
-    </script>
-
-
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
+</script>
 
 </body>
-
 </html>
