@@ -332,13 +332,6 @@ h3 {
   visibility: visible;
 }
 
-/* line 256, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/theme-default.scss */
-.owl-carousel:hover .owl-nav div:hover {
-  color: #000;
-  background: #fff;
-  border: 1px solid #fff;
-}
-
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_btn.scss */
 .boxed-btn {
   background: #fff;
@@ -1313,13 +1306,6 @@ h3 {
   padding-top: 30px;
 }
 
-@media (max-width: 767px) {
-  /* line 28, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_wedding_counter.scss */
-  .weeding_countdown_area .countdown_area .countdown_wrap {
-    display: block !important;
-  }
-}
-
 /* line 37, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_wedding_counter.scss */
 .weeding_countdown_area .countdown_area .countdown_wrap .single_countdown {
   text-align: center;
@@ -1343,7 +1329,7 @@ h3 {
 
 /* line 49, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_wedding_counter.scss */
 .weeding_countdown_area .countdown_area .countdown_wrap .single_countdown span {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -1895,30 +1881,19 @@ h3 {
   display: inline-block;
   position: absolute;
   left: 50%;
-  bottom: 0;
+  top: 0;
   z-index: 9;
+  box-shadow: 5px 7px 2px -2px #919191;
+  width: 150px;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
-@media (max-width: 767px) {
-  /* line 10, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_location.scss */
-  .location_area .location_info {
-    -webkit-transform: translateX(0%);
-    -moz-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    transform: translateX(0%);
-    left: 0%;
-    position: relative;
-  }
-}
-
 /* line 24, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_location.scss */
 .location_area .location_info .location_inner {
   background: #fff;
-  width: 616px;
   max-width: 616px;
   padding: 54px 60px 54px 60px;
 }

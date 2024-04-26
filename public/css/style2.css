@@ -9525,7 +9525,7 @@ a.text-dark:hover, a.text-dark:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: #000000b3;
   z-index: 1;
 }
 
@@ -9650,39 +9650,37 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 30px;
 }
 
-@media (min-width: 768px) {
-  .timeline::after {
-    position: absolute;
-    content: "";
-    width: 2px;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-    background: #E47A2E;
-  }
-  .timeline .row::before {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: calc(50% - 15px);
-    left: calc(50% - 15px);
-    background: #FFFFFF;
-    border: 2px solid #E47A2E;
-    transform: rotate(45deg);
-    z-index: 1;
-  }
-  .timeline .row::after {
-    content: "\f004";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-    position: absolute;
-    top: calc(50% - 10px);
-    left: calc(50% - 8px);
-    color: #E47A2E;
-    z-index: 2;
-  }
+.timeline::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  background: #E47A2E;
+}
+.timeline .row::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  background: #FFFFFF;
+  border: 2px solid #E47A2E;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.timeline .row::after {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 8px);
+  color: #E47A2E;
+  z-index: 2;
 }
 
 .gallery-item {
@@ -9735,14 +9733,14 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .gallery-carousel .owl-nav .owl-prev,
-.gallery-carousel .owl-nav .owl-next {
+.gallery-carousel .owl-nav .owl-next{
   width: 60px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #E47A2E;
-  background: #FFFFFF;
+  border: none;
   font-size: 30px;
 }
 
@@ -9750,4 +9748,129 @@ a.text-dark:hover, a.text-dark:focus {
   #event .border-right {
     border-right: none !important;
   }
+}
+
+/*------------------------------------------------------------------
+    LOADER 
+-------------------------------------------------------------------*/
+
+#preloader {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #dd666c;
+  z-index: 11000;
+  position: fixed;
+  display: block;
+}
+
+.pulse {
+height: 150px;
+width: 200px;
+overflow: hidden;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+}
+.pulse:after {
+content: '';
+display: block;
+background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200px 100px" enable-background="new 0 0 200px 100px" xml:space="preserve"><polyline fill="none" stroke-width="3px" stroke="white" points="2.4,58.7 70.8,58.7 76.1,46.2 81.1,58.7 89.9,58.7 93.8,66.5 102.8,22.7 110.6,78.7 115.3,58.7 126.4,58.7 134.4,54.7 142.4,58.7 197.8,58.7 "/></svg>') 0 0 no-repeat;
+width: 100%;
+height: 100%;
+position: absolute;
+-webkit-animation: 2s pulse linear infinite;
+animation: 2s pulse linear infinite;
+  clip: rect(0, 0, 100px, 0);
+}
+.pulse:before {
+content: '';
+position: absolute;
+z-index: -1;
+left: 2px;
+right: 2px;
+bottom: 0;
+top: 16px;
+margin: auto;
+height: 3px;
+
+}
+
+
+@-webkit-keyframes pulse {
+0% {
+  clip: rect(0, 0, 100px, 0);
+  opacity: 0.4;
+}
+4% {
+  clip: rect(0, 66.66667px, 100px, 0);
+  opacity: 0.6;
+}
+15% {
+  clip: rect(0, 133.33333px, 100px, 0);
+  opacity: 0.8;
+}
+20% {
+  clip: rect(0, 300px, 100px, 0);
+   opacity: 1;
+}
+
+80% {
+  clip: rect(0, 300px, 100px, 0);
+   opacity:0;
+}
+
+90% {
+  clip: rect(0, 300px, 100px, 0);
+  opacity: 0;
+}
+
+100% {
+  clip: rect(0, 300px, 100px, 0);
+  opacity:0;
+}
+}
+@keyframes pulse {
+0% {
+  clip: rect(0, 0, 100px, 0);
+}
+4% {
+  clip: rect(0, 66.66667px, 100px, 0);
+}
+15% {
+  clip: rect(0, 133.33333px, 100px, 0);
+}
+20% {
+  clip: rect(0, 300px, 100px, 0);
+   opacity:1;
+}
+
+80% {
+  clip: rect(0, 300px, 100px, 0);
+   opacity:0;
+}
+
+90% {
+  opacity: 0;
+}
+
+100% {
+  clip: rect(0, 300px, 100px, 0);
+  opacity:0;
+}
+
+}
+
+.pulse {
+text-align : center;
+}
+.pulse i{
+color: #ffffff;
+font-size: 38px;
 }

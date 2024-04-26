@@ -1,6 +1,17 @@
 (function ($) {
     "use strict";
 
+    $(window).on('load', function() { 
+		$('.preloader').fadeOut(); 
+		$('#preloader').delay(550).fadeOut('slow'); 
+		$('body').delay(450).css({'overflow':'visible'});
+	});
+    
+    if ($(this).scrollTop() > 200) {
+        $('.navbar').fadeIn('slow').css('display', 'flex');
+    } else {
+        $('.navbar').fadeOut('slow').css('display', 'none');
+    }
     // Navbar on scrolling
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -96,7 +107,7 @@
         ],
         responsive: {
             0:{
-                items:1
+                items:2
             },
             576:{
                 items:2
