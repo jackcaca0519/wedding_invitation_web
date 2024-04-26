@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation'
 import {PrismaClient} from '@prisma/client';
 const prisma = new PrismaClient();
 
@@ -19,8 +20,6 @@ export async function POST(request) {
         })
     }
 
-    return new Response('Success!', {
-        status: 200,
-    })
+    redirect('/')
 }
 
