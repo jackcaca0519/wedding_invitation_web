@@ -281,19 +281,19 @@
                                         <h3>你/妳 要參加喜宴嗎?</h3>
                                         <h4 class="font-weight-normal">2025/02/22 5:00pm</h4>
                                     </div>
-                                    <form action="#">
+                                    <form action="/api/gest" method="post">
                                         <div class="row">
                                             <div class="col-xl-12">
-                                                <input type="text" placeholder="姓名">
+                                                <input name="name" id="name" type="text" placeholder="姓名">
                                             </div>
                                             <div class="col-xl-12">
-                                                <input type="email" placeholder="Email">
+                                                <input name="email" id="email" type="email" placeholder="Email">
                                             </div>
                                             <div class="col-xl-12">
-                                                <input type="text" placeholder="地址">
+                                                <input name="address" id="address" type="text" placeholder="地址">
                                             </div>
                                             <div class="col-xl-12">
-                                                <input type="number" placeholder="人數">
+                                                <input name="people" id="people" type="number" placeholder="人數">
                                             </div>
                                             <div class="col-xl-12">
                                                 <button type="submit" class="boxed_btn3">送出</button>
