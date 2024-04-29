@@ -1,8 +1,9 @@
 import { redirect } from 'next/navigation'
 import {PrismaClient} from '@prisma/client';
-const prisma = new PrismaClient();
 
+const prisma = new PrismaClient();
 export const dynamic = 'force-dynamic' // defaults to auto
+
 export async function POST(request) {
     const formData = await request.formData()
     try {
@@ -22,4 +23,3 @@ export async function POST(request) {
 
     redirect('/')
 }
-
