@@ -58,11 +58,12 @@
     $('#attendding_form').on('submit', function(event) {
         event.preventDefault();
         const name = $('#name').val();
+        const phone = $('#phone').val();
         const email = $('#email').val();
         const address = $('#address').val();
         const people = $('#people').val();
 
-        if(!name || !email || !address || !people){
+        if(!name || !email || !address || !people || !phone){
             Swal.fire({
                 text: '所有欄位皆為必填!',
                 icon: "error",
@@ -75,6 +76,7 @@
             html: `<div class="d-flex justify-content-center"><div class="text-start">
                 <b>確認資料輸入無誤?</b><br>
                 姓名：${name}<br>
+                電話：${phone}<br>
                 email：${email}<br>
                 地址：${address}<br>
                 人數：${people}</div></div>`,

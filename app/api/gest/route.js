@@ -7,15 +7,17 @@ export const dynamic = 'force-dynamic' // defaults to auto
 export async function POST(request) {
     const formData = await request.formData()
     const name = formData.get('name');
+    const phone = formData.get('phone');
     const email = formData.get('email');
     const address = formData.get('address');
     const people = formData.get('people');
     
-    if(name && email && address && people){
+    if(name && email && address && people && phone){
         try {
             const saveContact = await prisma.gest.create({
                 data: {
                     name: formData.get('name'),
+                    phone: formData.get('phone'),
                     email: formData.get('email'),
                     address: formData.get('address'),
                     people: parseInt(formData.get('people')),

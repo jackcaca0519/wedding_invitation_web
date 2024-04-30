@@ -1501,13 +1501,15 @@ h3 {
 }
 
 /* line 62, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_attending.scss */
-.attending_area .main_attending_area .popup_box input {
+.attending_area .main_attending_area .popup_box input, .attending_area .main_attending_area .popup_box select {
   width: 100%;
   height: 50px;
   border: 1px solid #ddd;
+  border-radius: 2px;
   padding: 15px;
   margin-bottom: 20px;
   font-family: "monospace";
+  line-height: normal;
 }
 
 /* line 69, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_attending.scss */
