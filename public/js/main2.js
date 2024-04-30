@@ -57,8 +57,12 @@
 
     $('#attendding_form').on('submit', function(event) {
         event.preventDefault();
+        const name = $('#name').val();
+        const email = $('#email').val();
+        const address = $('#address').val();
+        const people = $('#people').val();
 
-        if(!$('#name').val() || !$('#email').val() || !$('#address').val() || !$('#people').val()){
+        if(!name || !email || !address || !people){
             Swal.fire({
                 text: '所有欄位皆為必填!',
                 icon: "error",
@@ -70,10 +74,10 @@
         Swal.fire({
             html: `<div class="d-flex justify-content-center"><div class="text-start">
                 <b>確認資料輸入無誤?</b><br>
-                姓名：${$('#name').val()}<br>
-                email：${$('#email').val()}<br>
-                地址：${$('#address').val()}<br>
-                人數：${$('#people').val()}</div></div>`,
+                姓名：${name}<br>
+                email：${email}<br>
+                地址：${address}<br>
+                人數：${people}</div></div>`,
             icon: "info",
             showCancelButton: true,
             confirmButtonColor: "#93c18c",
