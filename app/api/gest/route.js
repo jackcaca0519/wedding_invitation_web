@@ -28,7 +28,7 @@ export async function POST(request) {
         }
     }
 
-    redirect('/')
+    redirect('/success')
 }
 
 export async function GET(request) {
