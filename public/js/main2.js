@@ -57,6 +57,16 @@
 
     $('#attendding_form').on('submit', function(event) {
         event.preventDefault();
+
+        if(!$('#name').val() || !$('#email').val() || !$('#address').val() || !$('#people').val()){
+            Swal.fire({
+                text: '所有欄位皆為必填!',
+                icon: "error",
+                showConfirmButton: false,
+            })
+            return false;
+        }
+
         Swal.fire({
             html: `<div class="d-flex justify-content-center"><div class="text-start">
                 <b>確認資料輸入無誤?</b><br>
