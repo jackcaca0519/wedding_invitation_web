@@ -23,3 +23,22 @@ export async function POST(request) {
 
     redirect('/')
 }
+
+export async function GET(request) {
+    const searchParams = request.nextUrl.searchParams
+    const name = searchParams.get('name')
+
+    let gestData = null;
+    try {
+        gestData = await prisma.gest.findFirst({
+            where: { name: name },
+        });
+
+    } catch (error) {
+        return new Response(`error: ${error.message}`, {
+            status: 400,
+        })
+    }
+
+    return Response.json({name: gestData && gestData.name, id: gestData && gestData.id})
+}

@@ -11,6 +11,8 @@
     <!-- sandbox -->
     <link rel="stylesheet" href="plugin/sandbox-330/dist/assets/css/plugins.css">
     <link rel="stylesheet" href="plugin/sandbox-330/dist/assets/css/style.css">
+    <!-- sweetalert2 -->
+    <link rel="stylesheet" href="plugin/sweetalert2/sweetalert2.min.css">
     <!-- material Icons -->
     <link rel="stylesheet" href="plugin/material_icons/material.css">
     <!-- Google Web Fonts -->
@@ -49,13 +51,19 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
 
-<!-- LOADER -->
 <div id="preloader">
     <div class="preloader pulse">
         <i class="fa fa-heartbeat" aria-hidden="true"></i>
     </div>
-</div><!-- end loader -->
-<!-- END LOADER -->
+</div>
+
+<div id="loading" style="position: fixed;height: 100%;width: 100%;z-index: 10000;background-color: #00000078;display: none;">
+    <div class="h-100 w-100 d-flex justify-content-center align-items-center">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">處理中...</span>
+        </div>
+    </div>
+</div>
 
 <nav class="navbar fixed-top navbar-expand-lg py-0 px-lg-5" style="backdrop-filter: blur(5px);background-color: #ffffff99;">
     <a href="index.html" class="text-primary navbar-brand d-block d-lg-none p-0">
@@ -278,10 +286,10 @@
                             <div class="popup_box ">
                                 <div class="popup_inner">
                                     <div class="form_heading text-center">
-                                        <h3>你/妳 要參加喜宴嗎?</h3>
+                                        <h3>你/妳 要參加婚宴嗎?</h3>
                                         <h4 class="font-weight-normal">2025/02/22 5:00pm</h4>
                                     </div>
-                                    <form action="/api/gest" method="post">
+                                    <form id="attendding_form" action="/api/gest" method="post">
                                         <div class="row">
                                             <div class="col-xl-12">
                                                 <input name="name" id="name" type="text" placeholder="姓名">
@@ -345,6 +353,8 @@
 
 <!--sandbox-->
 <script src="plugin/sandbox-330/dist/assets/js/plugins.js"></script>
+<!--sweetalert2-->
+<script src="plugin/sweetalert2/sweetalert2.all.min.js"></script>
 
 <!--contact js-->
 <script src="js/contact.js"></script>
@@ -360,7 +370,6 @@
 <script src="lib/isotope/isotope.pkgd.min.js"></script>
 <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-<!-- <script src="js/main.js"></script> -->
 <script src="js/main2.js"></script>
 
 <script>
@@ -402,7 +411,6 @@
             'duration', // The full duration of the media
             'mute', // Toggle mute
             'volume', // Volume control
-            'fullscreen',
         ],
         ratio: '16:9',
         quality: {default: 1080},

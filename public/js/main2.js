@@ -45,7 +45,6 @@
         $('.btn-play').click(function () {
             $videoSrc = $(this).data("src");
         });
-        console.log($videoSrc);
 
         $('#videoModal').on('shown.bs.modal', function (e) {
             $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
@@ -54,6 +53,76 @@
         $('#videoModal').on('hide.bs.modal', function (e) {
             $("#video").attr('src', $videoSrc);
         })
+    });
+
+    $('#attendding_form').on('submit', function(event) {
+        event.preventDefault();
+        Swal.fire({
+            html: `<div class="d-flex justify-content-center"><div class="text-start">
+                <b>確認資料輸入無誤?</b><br>
+                姓名：${$('#name').val()}<br>
+                email：${$('#email').val()}<br>
+                地址：${$('#address').val()}<br>
+                人數：${$('#people').val()}</div></div>`,
+            icon: "info",
+            showCancelButton: true,
+            confirmButtonColor: "#93c18c",
+            cancelButtonColor: "#b5b5b5",
+            confirmButtonText: "是",
+            cancelButtonText: "否",
+            customClass:{
+                confirmButton: 'btn px-4 py-1',
+                cancelButton: 'btn px-4 py-1'
+            }
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                $('#loading').show();
+                const response = await fetch(`/api/gest/?name=${$('#name').val()}`, { cache: 'no-store' })
+                const gestData = await response.json()
+                $('#loading').hide();
+
+                if(gestData.name){
+                    Swal.fire({
+                        text: "此名稱已有一筆資料，請問是否覆蓋?",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#ca6262",
+                        cancelButtonColor: "#b5b5b5",
+                        confirmButtonText: "是",
+                        cancelButtonText: "否",
+                        customClass:{
+                            confirmButton: 'btn px-4 py-1',
+                            cancelButton: 'btn px-4 py-1'
+                        }
+                    }).then(async (result2) => {
+                        if (result2.isConfirmed) {
+                            $('#loading').show();
+
+                            try{
+                                const res = await fetch(`/api/gest/${gestData.id}/`, { method: 'DELETE' })
+                            }catch(err){
+                                $('#loading').hide();
+                                Swal.fire({
+                                    text: "刪除錯誤!",
+                                    icon: "error",
+                                    confirmButtonColor: "#b5b5b5",
+                                    confirmButtonText: "關閉",
+                                    customClass:{
+                                        confirmButton: 'btn px-4 py-1'
+                                    }
+                                });
+                            }
+                            this.submit();
+                        }else{
+                            this.submit();
+                        }
+                    });
+                }else{
+                    this.submit();
+                }
+            }
+        });
+        return false;
     });
 
 
