@@ -3,11 +3,11 @@
 
     $(window).on('load', function() { 
 		$('.preloader').fadeOut(); 
-		$('#preloader').delay(550).fadeOut('slow'); 
-		$('body').delay(450).css({'overflow':'visible'});
+		$('#preloader').fadeOut('slow');
+        $('body').attr('style', 'overflow: hidden auto')
 	});
     
-    if ($(this).scrollTop() > 200) {
+    if ($(window).scrollTop() > 200) {
         $('.navbar').fadeIn('slow').css('display', 'flex');
     } else {
         $('.navbar').fadeOut('slow').css('display', 'none');
@@ -91,9 +91,11 @@
         }).then(async (result) => {
             if (result.isConfirmed) {
                 $('#loading').show();
+                $('body').attr('style', 'overflow: hidden')
                 const response = await fetch(`/api/gest/?name=${$('#name').val()}`, { cache: 'no-store' })
                 const gestData = await response.json()
                 $('#loading').hide();
+                $('body').attr('style', 'overflow: hidden auto')
 
                 if(gestData.name){
                     Swal.fire({
@@ -111,6 +113,7 @@
                     }).then(async (result2) => {
                         if (result2.isConfirmed) {
                             $('#loading').show();
+                            $('body').attr('style', 'overflow: hidden')
 
                             try{
                                 const res = await fetch(`/api/gest/${gestData.id}/`, { method: 'DELETE' })
@@ -142,7 +145,7 @@
 
     // Scroll to Bottom
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 80) {
             $('.scroll-to-bottom').fadeOut('slow');
         } else {
             $('.scroll-to-bottom').fadeIn('slow');
@@ -161,21 +164,6 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-
 
     // Gallery carousel
     $(".gallery-carousel").owlCarousel({
