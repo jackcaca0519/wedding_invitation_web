@@ -72,6 +72,22 @@
             return false;
         }
 
+        async function submit(){
+            const gestData = {
+                'name': name,
+                'phone': phone,
+                'email': email,
+                'address': address,
+                'people': people,
+            }
+            try{
+                const res = await fetch(`/api/gest/`, { method: 'POST', body: JSON.stringify(gestData) })
+                location.href = '/success';
+            }catch(err){
+                console.log(err)
+            }
+        }
+
         Swal.fire({
             html: `<div class="d-flex justify-content-center"><div class="text-start">
                 <b>確認資料輸入無誤?</b><br>
@@ -94,7 +110,7 @@
             if (result.isConfirmed) {
                 $('#loading').show();
                 $('body').attr('style', 'overflow: hidden')
-                const response = await fetch(`/api/gest/?name=${$('#name').val()}`, { cache: 'no-store' })
+                const response = await fetch(`/api/gest/?name=${name}`, { cache: 'no-store' })
                 const gestData = await response.json()
                 $('#loading').hide();
                 $('body').attr('style', 'overflow: hidden auto')
@@ -131,13 +147,13 @@
                                     }
                                 });
                             }
-                            this.submit();
+                            submit();
                         }else{
-                            this.submit();
+                            submit();
                         }
                     });
                 }else{
-                    this.submit();
+                    submit();
                 }
             }
         });
