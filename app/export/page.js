@@ -35,6 +35,7 @@ const ExportPage = async () => {
                     <TableRow>
                         <TableCell>序號</TableCell>
                         <TableCell>姓名</TableCell>
+                        <TableCell>電話</TableCell>
                         <TableCell>email</TableCell>
                         <TableCell>地址</TableCell>
                         <TableCell align="right">人數</TableCell>
@@ -48,6 +49,7 @@ const ExportPage = async () => {
                         >
                             <TableCell>{index+1}</TableCell>
                             <TableCell>{row.name}</TableCell>
+                            <TableCell>{row.phone}</TableCell>
                             <TableCell>{row.email}</TableCell>
                             <TableCell>{row.address}</TableCell>
                             <TableCell align="right">{row.people}</TableCell>

@@ -1,24 +1,25 @@
-import { redirect } from 'next/navigation'
 import {PrismaClient} from '@prisma/client';
 
 const prisma = new PrismaClient();
 export const dynamic = 'force-dynamic' // defaults to auto
 
 export async function POST(request) {
-    const formData = await request.formData()
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const address = formData.get('address');
-    const people = formData.get('people');
+    const formData = await request.json()
+    const name = formData.name;
+    const phone = formData.phone;
+    const email = formData.email;
+    const address = formData.address;
+    const people = formData.people;
     
-    if(name && email && address && people){
+    if( name && phone && email && address && people ){
         try {
             const saveContact = await prisma.gest.create({
                 data: {
-                    name: formData.get('name'),
-                    email: formData.get('email'),
-                    address: formData.get('address'),
-                    people: parseInt(formData.get('people')),
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    address: address,
+                    people: parseInt(people),
                 },
             });
         } catch (error) {
@@ -27,8 +28,9 @@ export async function POST(request) {
             })
         }
     }
-
-    redirect('/success')
+    return new Response('success', {
+        status: 200,
+    })
 }
 
 export async function GET(request) {

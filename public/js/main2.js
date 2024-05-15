@@ -3,11 +3,11 @@
 
     $(window).on('load', function() { 
 		$('.preloader').fadeOut(); 
-		$('#preloader').delay(550).fadeOut('slow'); 
-		$('body').delay(450).css({'overflow':'visible'});
+		$('#preloader').fadeOut('slow');
+        $('body').attr('style', 'overflow: hidden auto')
 	});
     
-    if ($(this).scrollTop() > 200) {
+    if ($(window).scrollTop() > 200) {
         $('.navbar').fadeIn('slow').css('display', 'flex');
     } else {
         $('.navbar').fadeOut('slow').css('display', 'none');
@@ -58,11 +58,12 @@
     $('#attendding_form').on('submit', function(event) {
         event.preventDefault();
         const name = $('#name').val();
+        const phone = $('#phone').val();
         const email = $('#email').val();
         const address = $('#address').val();
         const people = $('#people').val();
 
-        if(!name || !email || !address || !people){
+        if(!name || !email || !address || !people || !phone){
             Swal.fire({
                 text: '所有欄位皆為必填!',
                 icon: "error",
@@ -71,10 +72,27 @@
             return false;
         }
 
+        async function submit(){
+            const gestData = {
+                'name': name,
+                'phone': phone,
+                'email': email,
+                'address': address,
+                'people': people,
+            }
+            try{
+                const res = await fetch(`/api/gest/`, { method: 'POST', body: JSON.stringify(gestData) })
+                location.href = '/success';
+            }catch(err){
+                console.log(err)
+            }
+        }
+
         Swal.fire({
             html: `<div class="d-flex justify-content-center"><div class="text-start">
                 <b>確認資料輸入無誤?</b><br>
                 姓名：${name}<br>
+                電話：${phone}<br>
                 email：${email}<br>
                 地址：${address}<br>
                 人數：${people}</div></div>`,
@@ -91,9 +109,11 @@
         }).then(async (result) => {
             if (result.isConfirmed) {
                 $('#loading').show();
-                const response = await fetch(`/api/gest/?name=${$('#name').val()}`, { cache: 'no-store' })
+                $('body').attr('style', 'overflow: hidden')
+                const response = await fetch(`/api/gest/?name=${name}`, { cache: 'no-store' })
                 const gestData = await response.json()
                 $('#loading').hide();
+                $('body').attr('style', 'overflow: hidden auto')
 
                 if(gestData.name){
                     Swal.fire({
@@ -111,6 +131,7 @@
                     }).then(async (result2) => {
                         if (result2.isConfirmed) {
                             $('#loading').show();
+                            $('body').attr('style', 'overflow: hidden')
 
                             try{
                                 const res = await fetch(`/api/gest/${gestData.id}/`, { method: 'DELETE' })
@@ -126,13 +147,13 @@
                                     }
                                 });
                             }
-                            this.submit();
+                            submit();
                         }else{
-                            this.submit();
+                            submit();
                         }
                     });
                 }else{
-                    this.submit();
+                    submit();
                 }
             }
         });
@@ -142,7 +163,7 @@
 
     // Scroll to Bottom
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 80) {
             $('.scroll-to-bottom').fadeOut('slow');
         } else {
             $('.scroll-to-bottom').fadeIn('slow');
@@ -161,21 +182,6 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-
 
     // Gallery carousel
     $(".gallery-carousel").owlCarousel({
