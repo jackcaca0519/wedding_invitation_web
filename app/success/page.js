@@ -10,14 +10,14 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 const SuccessPage = async () => {
     return (
         <>
-            <div className="h-100 attending_area p-0 d-flex align-items-center">
+            <div className="h-100 attending_area p-0 d-flex align-items-center overflow-hidden">
                 <Container className="main_attending_area" maxWidth="sm" style={{padding: '20px'}}>
-                    <div className="flower_1 d-none d-lg-block">
+                    <div className="flower_1">
                         <Image src="/img/appointment/flower-top.png"
                             width={400}
                             height={200}/>
                     </div>
-                    <div className="flower_2 d-none d-lg-block">
+                    <div className="flower_2">
                         <Image src="/img/appointment/flower-bottom.png"
                             width={150}
                             height={150}/>
@@ -29,11 +29,11 @@ const SuccessPage = async () => {
                                 <h1 className="text-uppercase font-weight-normal m-0 text-white" style={{letterSpacing: 2}}>報名成功</h1>
                             </div>
                             <CardContent style={{flexDirection:'row', justifyContent:'center'}}>
-                                <div className="px-5">
+                                <div className="px-md-5">
                                     <div className="text-center border-bottom border-1 py-3 px-4">
                                         <h2 className="text-uppercase font-weight-normal m-0 text-white" style={{letterSpacing: 2}}>不見不散喔</h2>
                                     </div>
-                                    <div className="py-1 px-4 d-flex justify-content-center">
+                                    <div className="py-1 px-md-4 d-flex justify-content-center">
                                         <div className="text-left">
                                             <h4 className="text-uppercase font-weight-normal m-0 text-white" style={{letterSpacing: 2}}>時間：2025.02.22 17:00</h4>
                                             <h4 className="text-uppercase font-weight-normal m-0 text-white" style={{letterSpacing: 2}}>地點：老新臺菜十全店</h4>
