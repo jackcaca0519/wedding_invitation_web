@@ -9564,7 +9564,7 @@ a.text-dark:hover, a.text-dark:focus {
   border: none;
   outline: none !important;
   padding: 18px 20px 20px 28px;
-  background: #FFFFFF;
+  background: transparent;
 }
 
 .btn-play:before {
@@ -9577,7 +9577,7 @@ a.text-dark:hover, a.text-dark:focus {
   display: block;
   width: 60px;
   height: 60px;
-  background: #FFFFFF;
+  background: #ffffff36;
   border-radius: 100%;
   animation: pulse-border 1500ms ease-out infinite;
 }
@@ -9592,7 +9592,7 @@ a.text-dark:hover, a.text-dark:focus {
   display: block;
   width: 60px;
   height: 60px;
-  background: #FFFFFF;
+  background: #ffffff6e;
   border-radius: 100%;
   transition: all 200ms;
 }
@@ -9604,7 +9604,7 @@ a.text-dark:hover, a.text-dark:focus {
   width: 0;
   height: 0;
   left: -1px;
-  border-left: 16px solid #E47A2E;
+  border-left: 16px solid #59524e;
   border-top: 11px solid transparent;
   border-bottom: 11px solid transparent;
 }

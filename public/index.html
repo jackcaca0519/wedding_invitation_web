@@ -91,8 +91,15 @@
 
 <div class="position-relative container-fluid p-0 mb-5 pb-5" style="height: 100vh;" id="home">
     <div class="position-absolute carousel-caption d-flex flex-column align-items-center justify-content-center" style="z-index: 100;height: 100vh;">
-        <div class="p-3" style="max-width: 900px;">
+        <div class="position-absolute d-flex align-items-center justify-content-center" style="top:15%;">
             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Jack & Angel</h1>
+        </div>
+
+        <div class="position-absolute d-flex flex-column align-items-center justify-content-center" style="bottom: 15%;">
+            <button type="button" class="btn-play m-0 mx-auto mb-4" data-toggle="modal"
+                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                <span></span>
+            </button>
             <div class="border-top border-bottom border-light py-3 px-4">
                 <h1 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">邀請您參加婚宴</h1>
             </div>
@@ -102,22 +109,18 @@
                     <h5 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">地點：老新臺菜十全店</h5>
                 </div>
             </div>
-            <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                <span></span>
-            </button>
         </div>
     </div>
-    <div id="header-carousel" class="carousel slide carousel-fade" style="height: 100vh;" data-ride="carousel">
+    <div style="height: 100vh;">
         <div class="h-100 carousel-inner">
             <div class="h-100 carousel-item position-relative active">
-                <img class="position-absolute w-100 h-100" src="/img/custom/107_5160.jpg" style="object-fit: cover;">
+                <img class="position-absolute w-100 h-100" src="/img/custom/107_5120.jpg" style="object-fit: cover;object-position: center 35%;">
             </div>
             <div class="h-100 carousel-item position-relative">
-                <img class="position-absolute w-100 h-100" src="/img/custom/107_5177.jpg" style="object-fit: cover;">
+                <img class="position-absolute w-100 h-100" src="/img/custom/107_5177.jpg" style="object-fit: cover;object-position: 53% 35%;">
             </div>
             <div class="h-100 carousel-item position-relative">
-                <img class="position-absolute w-100 h-100" src="/img/custom/107_5354.jpg" style="object-fit: cover;">
+                <img class="position-absolute w-100 h-100" src="/img/custom/107_5360.jpg" style="object-fit: cover;object-position: center 35%;">
             </div>
         </div>
         <a class="position-absolute carousel-control-prev justify-content-start" style="z-index: 101;" href="#header-carousel" data-slide="prev">
