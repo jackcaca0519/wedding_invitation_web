@@ -25,7 +25,7 @@ export default function TableComponent({ gests }) {
     }
 
     return (
-        <>
+        <Container style={{overflow: 'auto', height: '100%' }}>
             <Container maxWidth="sm" style={{padding: '5px', textAlign: 'center' }}>
                 <h3>總人數：{ gests.reduce((sum, item) => sum + item.people, 0) }</h3>
             </Container>
@@ -65,6 +65,6 @@ export default function TableComponent({ gests }) {
                     </TableBody>
                 </Table>
             </TableContainer>
-        </>
+        </Container>
     );
 }
